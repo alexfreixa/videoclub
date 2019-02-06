@@ -111,6 +111,8 @@ class CatalogController extends Controller {
 	}
 	
 	public function test() {
+
+		
 	}
 	
 	
