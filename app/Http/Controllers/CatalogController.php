@@ -65,17 +65,15 @@ class CatalogController extends Controller {
 		$movie->save();
 		Notification::info('La pelicula ha sido alquilada.');
 		return redirect('/catalog/show/' . $id);
-	
+		
 	}
 	
 	public function putReturn($id) {
 		$movie = Movie::findOrFail($id);
 		$movie -> rented = ('1');
 		$movie->save();
-	
 		Notification::info('La pelicula ha sido devuelta.');
 		return redirect('/catalog/show/' . $id);
-
 	}
 
 	public function putVote($id, $rate) {
@@ -110,6 +108,9 @@ class CatalogController extends Controller {
 
 		Notification::warning('La pelicula ha sido eliminada.');
 		return redirect('/catalog');
+	}
+	
+	public function test() {
 	}
 	
 	
