@@ -65,7 +65,7 @@ class CatalogController extends Controller {
 		$movie->save();
 		Notification::info('La pelicula ha sido alquilada.');
 		return redirect('/catalog/show/' . $id);
-		
+	
 	}
 	
 	public function putReturn($id) {
